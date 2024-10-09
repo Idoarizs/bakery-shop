@@ -1,0 +1,451 @@
+@import url(module/css/root.module.css);
+
+* {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: var(--header-one);
+}
+
+label {
+  font-size: var(--label);
+}
+
+p {
+  font-size: var(--paragraph);
+}
+
+a {
+  font-size: var(--anchor-link);
+  color: black;
+}
+
+span {
+  color: var(--light-yellow);
+}
+
+input {
+  padding: 5px;
+}
+
+/* Navigation Bar */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--padding-y);
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+nav > .list-items {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  gap: var(--sm-gap);
+  flex: 1;
+}
+
+nav > .icon {
+  display: flex;
+  justify-content: center;
+}
+
+nav > .icon > img {
+  width: 50px;
+  height: auto;
+  border-radius: 100%;
+}
+
+nav > .cta {
+  display: flex;
+  justify-content: center;
+  gap: var(--sm-gap);
+  align-items: center;
+  flex: 1;
+}
+
+nav > .cta > .btn > a {
+  color: var(--light-yellow);
+  border: 1px solid var(--light-yellow);
+  background-color: transparent;
+  padding: var(--padding);
+  border-radius: var(--sm-border-r);
+  transition: all 300ms ease-in-out;
+}
+
+nav > .cta > .btn > a:hover {
+  color: white;
+  background-color: var(--light-yellow);
+}
+
+/* About */
+#about.container > .contents {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sm-gap);
+  margin: var(--margin-auto);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(assets/place/bakery-shop-place.jpeg);
+  background-position-y: -35rem;
+  height: 350px;
+  width: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+#about.container > .contents::before {
+  content: "";
+  background: linear-gradient(to top, black, transparent);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+#about.container > .contents > .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: var(--max-width);
+  margin: var(--margin-auto);
+  padding: var(--padding-x);
+  flex: 1;
+  color: white;
+}
+
+#about.container > .contents > .description p {
+  width: 75%;
+}
+
+/* Catalog*/
+#catalog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: var(--max-width);
+  margin: var(--margin-auto);
+  padding: var(--padding);
+  gap: 15px;
+}
+
+#catalog > .explanation {
+  width: 60%;
+  text-align: center;
+}
+
+#catalog > .product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Product Card */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  flex: 1;
+  flex-basis: 250px;
+  height: auto;
+  overflow: hidden;
+  transition: transform 300ms ease-in-out;
+}
+
+.product-card:hover {
+  transform: scale(0.95);
+}
+
+.product-card > .img-content > img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: var(--lg-border-r);
+}
+
+.product-card > .detail-content {
+  padding: var(--padding-y);
+}
+
+/* Testimonial */
+#testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: var(--max-width);
+  margin: var(--margin-auto);
+  padding: var(--padding);
+}
+
+#testimonial > p {
+  width: 60%;
+}
+
+#testimonial > .card-list {
+  display: flex;
+  margin: var(--margin-y);
+  padding: var(--padding);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--sm-gap-x);
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 450px;
+  padding: var(--padding);
+}
+
+.testimonial-card > .picture > img {
+  border-radius: var(--max-border-r);
+}
+
+.testimonial-card > .review {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.testimonial-card > .review > label {
+  font-weight: bold;
+}
+
+/* Service */
+#service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: var(--max-width);
+  margin: var(--margin-auto);
+  padding: var(--padding);
+  gap: 15px;
+}
+
+#service > .text-content > p {
+  width: 60%;
+  margin: auto;
+}
+
+#service > .card-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+/* Service Card */
+.service-card {
+  display: flex;
+  flex-basis: 200px;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding);
+}
+
+.service-card > .icon svg {
+  width: 25px;
+  height: auto;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: var(--max-border-r);
+}
+
+/* Contact */
+#contact {
+  background-color: var(--light-yellow);
+}
+
+#contact > .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: var(--margin-auto);
+  max-width: var(--max-width);
+  gap: var(--sm-gap-x);
+}
+
+#contact > .container > .main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: var(--margin-y);
+  gap: 2.5rem;
+}
+
+#contact > .container > .main-content > .detail-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#contact > .container > .main-content > .detail-contact > a {
+  font-weight: bold;
+  text-decoration: underline;
+  width: max-content;
+}
+
+#contact > .container > .main-content > .customer-service {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+#contact > .container > .second-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: white;
+  border-radius: var(--lg-border-r);
+  margin: var(--margin-y);
+  padding: var(--padding);
+  gap: 15px;
+}
+
+#contact > .container > .second-content > .message-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5px;
+}
+
+#contact > .container > .second-content > .message-item > label {
+  font-weight: normal;
+  font-size: small;
+}
+
+#contact > .container > .second-content > .submit > input {
+  width: 100%;
+  background-color: var(--light-yellow);
+  border: none;
+  border-radius: var(--lg-border-r);
+  padding: var(--padding);
+  cursor: pointer;
+}
+
+#contact > .footer {
+  background-color: black;
+  color: var(--light-yellow);
+}
+
+#contact > .footer > .content {
+  max-width: var(--max-width);
+  padding: var(--padding);
+  margin: auto;
+}
+
+/* Customer Service */
+.customer-s-card {
+  flex: 1;
+  display: flex;
+  flex-basis: 150px;
+  flex-direction: column;
+}
+
+.customer-s-card > p {
+  text-align: justify;
+}
+
+.customer-s-card > .card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.customer-s-card > .card-header > label {
+  font-weight: bold;
+}
+
+.customer-s-card > .card-header > .icon {
+  margin-left: 10px;
+}
+
+/* Product Detail */
+.product-detail {
+  display: flex;
+  gap: var(--sm-gap-x);
+  align-items: center;
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: var(--margin-auto);
+}
+
+.product-detail > img {
+  max-height: 80vh;
+  object-fit: cover;
+  display: flex;
+  flex: 2;
+  border-radius: var(--lg-border-r);
+}
+
+.product-detail > .detail-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.product-detail > .detail-content > .description > label {
+  background-color: black;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  border-radius: 100px;
+  font-size: 10px;
+}
+
+.product-detail > .detail-content > .description > .rating {
+  display: flex;
+  padding: var(--padding-y);
+}
+
+.product-detail > .detail-content > .pricing {
+  margin: var(--margin-y);
+}
+
+.product-detail > .detail-content > .cta {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.product-detail > .detail-content > .cta > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 15px;
+  height: 20px;
+  border-radius: var(--sm-border-r);
+  background-color: black;
+  color: white;
+}
+
+.product-detail > .detail-content > .cta > a:first-of-type {
+  flex: 1;
+}

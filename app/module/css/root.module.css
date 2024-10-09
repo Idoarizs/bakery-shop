@@ -1,0 +1,44 @@
+/* Reusable Variables */
+:root {
+  /* Font */
+  --header-one: 36px;
+  --label: 14px;
+  --paragraph: 12px;
+  --anchor-link: 10px;
+
+  /* Width */
+  --max-width: 1200px;
+  --max-width-s: 200px;
+
+  /* Margin & Padding*/
+  --margin: 20px 15px;
+  --margin-auto: auto;
+  --margin-x: 0px 15px;
+  --margin-y: 20px 0px;
+
+  --padding: 15px 20px;
+  --padding-auto: 5px auto 5px auto;
+  --padding-x: 0px 5px;
+  --padding-y: 5px 0px;
+
+  /* Border Radius */
+  --sm-border-r: 5px;
+  --lg-border-r: 10px;
+  --max-border-r: 100%;
+
+  /* Box Shadow */
+  --box-shadow: 0px 0px 1px rgba(0, 0, 0, 1);
+
+  /* Gap */
+  --sm-gap: 5rem;
+  --sm-gap-y: 5rem 0rem;
+  --sm-gap-x: 0rem 5rem;
+  --lg-gap: 10rem;
+  --lg-gap-y: 10rem 0rem;
+  --lg-gap-x: 0rem 10rem;
+
+  /* Color */
+  --light-yellow: #f9c73d;
+  --dark-brown: #894e3f;
+  --soft-brown: #eee1ba;
+}
